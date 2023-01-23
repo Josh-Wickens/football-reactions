@@ -2,11 +2,11 @@
     background-color: #234E70;
 }
 
-#NavText {
+.NavLink {
+    padding: 5px;
     color: #FBF8BE;
 }
 
-.NavLink {
-    padding: 5px;
+.Active {
+    color: white;
 }
-
