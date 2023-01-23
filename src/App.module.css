@@ -1,0 +1,9 @@
+.App {
+    font-family: "PT serif", sans-serif;
+    min-height: 100vh;
+    background-color: #FBF8BE;
+}
+
+.Main {
+    padding-top: 85px;
+}
