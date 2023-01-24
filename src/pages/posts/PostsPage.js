@@ -35,6 +35,7 @@ function PostsPage({ message, filter = "" }) {
     fetchPosts();
   }, [filter, pathname]);
 
+
   return (
     <Row className="h-100">
         <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
