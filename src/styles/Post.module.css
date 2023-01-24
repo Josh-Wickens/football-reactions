@@ -1,9 +1,10 @@
 .Post {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #dadadf;
     border-radius: 2px;
     margin-bottom: 16px;
     text-align: center;
+    color: #234E70;
   }
 
 .PostBar {

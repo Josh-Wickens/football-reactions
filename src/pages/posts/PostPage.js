@@ -31,7 +31,7 @@ function PostPage() {
 
   return (
     <Row className="h-100">
-    <Col lg={2} className="d-none d-lg-block p-0 p-lg-2">
+    <Col sm={1} lg={2} className="d-none d-lg-block p-0 p-lg-2">
         Popular profiles for desktop
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
@@ -39,7 +39,7 @@ function PostPage() {
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>Comments</Container>
       </Col>
-      <Col lg={2} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
         Popular profiles for desktop
       </Col>
       

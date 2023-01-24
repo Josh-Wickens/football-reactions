@@ -4,6 +4,7 @@
 }
 
 .NavLink {
+    vertical-align: middle;
     height: auto;
     padding: 5px;
     color: #FBF8BE;
@@ -15,4 +16,7 @@
     color: white;
 }
 
+.Nav {
+    vertical-align: middle;
+}
 
