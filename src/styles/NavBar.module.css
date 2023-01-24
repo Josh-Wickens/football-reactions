@@ -1,5 +1,6 @@
 .NavBar {
     background-color: #234E70;
+    width: 100%;
 }
 
 .NavLink {
@@ -13,3 +14,5 @@
 .Active {
     color: white;
 }
+
+
