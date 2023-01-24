@@ -14,8 +14,8 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/nothing.png";
-// import InfiniteScroll from "react-infinite-scroll-component";
-// import { fetchMoreData } from "../../utils/utils";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function Search({ message, filter = "" }) {
 //   const [posts, setPosts] = useState({ results: [] });
@@ -68,6 +68,25 @@ function Search({ message, filter = "" }) {
         
                 {hasLoaded ? (
                   <>
+
+{profile.results.length ? (
+              <InfiniteScroll
+                children={profile.results.map((profile) => (
+                  <profile key={profile.id} {...profile} setProfiles={setProfiles} />
+                ))}
+                dataLength={profile.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!profile.next}
+                next={() => fetchMoreData(profile, setProfiles)}
+              />
+            ) : (
+              <Container className={appStyles.Content}>
+                <Asset src={NoResults} message={message} />
+              </Container>
+            )}
+                    
+
+
                     {profile.results.length ? (
               profile.results.map((post) => (
                 <Post key={profile.id} {...post} setProfiles={setProfiles} />
