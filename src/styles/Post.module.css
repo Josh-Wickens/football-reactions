@@ -1,0 +1,38 @@
+.Post {
+    background-color: #ffffff;
+    border: 1px solid #dadadf;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+.PostBar {
+    text-align: right;
+}
+
+i {
+    font-size: 150%;
+}
+
+.ticked {
+    font-size: 300%;
+    color: green;
+}
+.CantCheck:hover {
+    color: red;
+
+}
+
+.tick {
+    color: black;
+  }
+  
+  .tick:hover {
+    color: greenyellow;
+    font-size: 250%;
+  }
+
+.Count {
+    font-size: 150%;
+    padding: 5px;
+}
