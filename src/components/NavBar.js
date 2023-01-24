@@ -4,10 +4,52 @@ import logo from "../assets/logo-fr.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
-  const loggedInIcons = <>{currentUser?.username}</>
+  const addPostIcon = (
+    <NavLink
+      exact
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/posts/create"
+    >
+      <i className="fa fa-pencil-square-o"></i>
+      Post
+    </NavLink>
+  );
+  const loggedInIcons = (
+    <>
+      <NavLink
+        exact
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/topics"
+      >
+        Topics
+      </NavLink>
+      <NavLink
+        exact
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/search"
+      >
+        Search
+      </NavLink>
+      <NavLink
+        exact
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >Profile
+        <Avatar src={currentUser?.profile_image} height={50} />
+      </NavLink>
+      <NavLink className={styles.NavLink} to="/">
+        Sign Out
+      </NavLink>
+    </>
+  );
   const loggedOutIcons = (
     <>
       <NavLink
@@ -36,6 +78,7 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="50" />
           </Navbar.Brand>
         </NavLink>
+        {currentUser && addPostIcon}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>

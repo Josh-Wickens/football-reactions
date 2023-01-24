@@ -3,9 +3,12 @@
 }
 
 .NavLink {
+    height: auto;
     padding: 5px;
     color: #FBF8BE;
 }
+
+
 
 .Active {
     color: white;
