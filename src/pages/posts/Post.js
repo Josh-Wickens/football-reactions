@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -29,15 +29,20 @@ const Post = (props) => {
   const location = {
     pathname: '/'}
 
+    function SetPage() {
+      const [page, setPage] = useState([]);}
+
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
+    
   };
 
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
       history.push(location);
-      window.location.reload(false);
+      SetPage();
+
     } catch (err) {
       console.log(err);
     }
