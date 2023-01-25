@@ -70,7 +70,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        Profile
+        {currentUser?.username}
         <Avatar src={currentUser?.profile_image} height={50} />
       </NavLink>
         <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
