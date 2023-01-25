@@ -31,3 +31,14 @@
 .Card {
     background-color: aliceblue;
 }
+
+.Content {
+
+  padding: 10px;
+
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
+}
