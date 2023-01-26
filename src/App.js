@@ -15,6 +15,8 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import TopicsPostCreateForm from "./pages/topics/TopicsPostCreatePost";
+import TopicsPostPage from "./pages/topics/TopicsPostPage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -49,6 +51,8 @@ function App() {
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/topics/create" render={() => <TopicsPostCreateForm />} />
+          <Route exact path="/topics/:id" render={() => <TopicsPostPage />} />
           <Route
             exact
             path="/profiles/:id/edit/username"
