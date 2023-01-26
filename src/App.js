@@ -11,7 +11,7 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import Search from "./pages/search/Search";
 import PostEditForm from "./pages/posts/PostEditForm";
-import ProfilePage from "./profiles/ProfilePage";
+import ProfilePage from "./pages/profiles/ProfilePage";
 
 function App() {
   const currentUser = useCurrentUser();
