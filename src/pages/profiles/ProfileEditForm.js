@@ -27,11 +27,11 @@ const ProfileEditForm = () => {
 
   const [profileData, setProfileData] = useState({
     name: "",
-    content: "",
+    bio: "",
     image: "",
     support: "",
   });
-  const { name, content, image, support } = profileData;
+  const { name, bio, image, support } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -40,8 +40,8 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, content, image, support } = data;
-          setProfileData({ name, content, image, support });
+          const { name, bio, image, support } = data;
+          setProfileData({ name, bio, image, support });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -65,7 +65,7 @@ const ProfileEditForm = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", name);
-    formData.append("content", content);
+    formData.append("bio", bio);
     formData.append("support", support);
 
     if (imageFile?.current?.files[0]) {
@@ -91,9 +91,9 @@ const ProfileEditForm = () => {
         <Form.Label>Bio</Form.Label>
         <Form.Control
           as="textarea"
-          value={content}
+          value={bio}
           onChange={handleChange}
-          name="content"
+          name="bio"
           rows={7}
         />
         

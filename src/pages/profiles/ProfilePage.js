@@ -72,6 +72,7 @@ function ProfilePage() {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
+          <p>{profile?.support}</p>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
@@ -85,6 +86,15 @@ function ProfilePage() {
               <div>{profile?.following_count}</div>
               <div>following</div>
             </Col>
+            
+          </Row>
+          <Row>
+            <Col lg={6}>
+          <hr />
+            <h5 className="m-2">
+              Who do you support?</h5>
+            </Col>
+
           </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
