@@ -16,6 +16,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+import ActiveProfiles from "../profiles/ActiveProfiles";
 
 export const BackButton = () => {
   let history = useHistory();
@@ -56,7 +57,7 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col sm={1} lg={2} className="d-none d-lg-block p-0 p-lg-2">
-      <PopularProfiles />
+      <ActiveProfiles />
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
       <PopularProfiles mobile />

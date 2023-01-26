@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Media } from "react-bootstrap";
+import { Media, OverlayTrigger, Tooltip  } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
@@ -17,6 +17,8 @@ const Comment = (props) => {
     updated_at,
     content,
     id,
+    like_id,
+    likes_count,
     setPost,
     setComments,
   } = props;
@@ -44,6 +46,38 @@ const Comment = (props) => {
     } catch (err) {}
   };
 
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes-comment/", { comment: id });
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: prevComments.results.map((comment) => {
+          return comment.id === id
+            ? { ...comment, likes_count: comment.likes_count + 1, like_id: data.id }
+            : comment;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes-comment/${like_id}/`);
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: prevComments.results.map((comment) => {
+          return comment.id === id
+            ? { ...comment, likes_count: comment.likes_count - 1, like_id: null }
+            : comment;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <>
      <div className={styles.Comments}>
@@ -67,6 +101,33 @@ const Comment = (props) => {
           ) : (
             <p>{content}</p>
           )}
+          <div className={styles.PostBar}>
+          {is_owner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't agree with your own post!</Tooltip>}
+            >
+              <i className={`fa fa-check ${styles.CantCheck}`} />
+            </OverlayTrigger>
+          ) : like_id ? (
+            <span onClick={handleUnlike}>
+              <i className={`fa fa-check ${styles.ticked}`} />
+            </span>
+          ) : currentUser ? (
+            <span onClick={handleLike}>
+              <i className={`fa fa-check ${styles.tick}`} />
+            </span>
+          ) : (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to like posts!</Tooltip>}
+            >
+              <i className={`fa fa-check ${styles.CantCheck}`} />
+            </OverlayTrigger>
+          )}
+          <span className={styles.Count}>{likes_count}</span>
+
+        </div>
         </Media.Body>
         {is_owner && !showEditForm && (
           <MoreDropdown
