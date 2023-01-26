@@ -16,6 +16,7 @@ import NoResults from "../../assets/nothing.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+import ActiveProfiles from "../profiles/ActiveProfiles";
 
 
 function PostsPage({ message, filter = "" }) {
@@ -42,7 +43,7 @@ function PostsPage({ message, filter = "" }) {
   return (
     <Row className="h-100">
         <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
+        <ActiveProfiles />
       </Col>
       <Col className="py-2 p-0 p-lg-2" sm={10} lg={8}>
         <p>Popular profiles mobile</p>

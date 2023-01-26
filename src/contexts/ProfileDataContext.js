@@ -14,6 +14,7 @@ export const ProfileDataProvider = ({ children }) => {
     // we will use the pageProfile later!
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
+    activeProfiles: { results: [] },
   });
 
   const currentUser = useCurrentUser();
@@ -80,6 +81,24 @@ export const ProfileDataProvider = ({ children }) => {
         console.log(err);
       }
     };
+    handleMount();
+  }, [currentUser]);
+
+
+    useEffect(() => {
+      const handleMount = async () => {
+        try {
+          const { data } = await axiosReq.get(
+            "/profiles/?ordering=-posts_count"
+          );
+          setProfileData((prevState) => ({
+            ...prevState,
+            activeProfiles: data,
+          }));
+        } catch (err) {
+          console.log(err);
+        }
+      };
 
     handleMount();
   }, [currentUser]);
