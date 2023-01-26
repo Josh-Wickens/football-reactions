@@ -7,8 +7,8 @@ import Avatar from "../../components/Avatar";
 
 const ProfileSearch = (props) => {
   const {
+    id,
     owner,
-    profile_id,
     image,
     fan_or_club,
     support,
@@ -22,7 +22,7 @@ const ProfileSearch = (props) => {
       <Card.Body>
         <h5>{fan_or_club}</h5>
       </Card.Body>
-      <Link to={`/profiles/${profile_id}`}>
+      <Link to={`/profiles/${id}`}>
             <Avatar src={image} height={55} />
             {owner}
           </Link>

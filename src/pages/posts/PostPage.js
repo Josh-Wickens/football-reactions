@@ -17,17 +17,9 @@ import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import ActiveProfiles from "../profiles/ActiveProfiles";
+import { BackButton } from "../../hooks/BackButton";
 
-export const BackButton = () => {
-  let history = useHistory();
-  return (
-    <>
-      <button className={`{btnStyles.Button} ${btnStyles.Blue}`} onClick={() => history.goBack()}>
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
-      </button>
-    </>
-  );
-};
+
 
 function PostPage() {
   const { id } = useParams();
@@ -57,13 +49,13 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col sm={1} lg={2} className="d-none d-lg-block p-0 p-lg-2">
+      <BackButton />
       <ActiveProfiles />
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
       <PopularProfiles mobile />
 
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <BackButton className="primary" />
         <Container className={appStyles.Content}>
           {currentUser ? (
             <CommentCreateForm

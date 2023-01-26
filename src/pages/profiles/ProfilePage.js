@@ -24,6 +24,7 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/nothing.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import { BackButton } from "../../hooks/BackButton";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -61,6 +62,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
+    <BackButton />
     {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
