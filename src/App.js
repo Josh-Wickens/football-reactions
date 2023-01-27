@@ -17,6 +17,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import TopicsPostCreateForm from "./pages/topics/TopicsPostCreatePost";
 import TopicsPostPage from "./pages/topics/TopicsPostPage";
+import TopicPostsPage from "./pages/topics/TopicPostsPage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -30,19 +31,22 @@ function App() {
           <Route
             exact
             path="/"
-            render={() => (
-              <PostsPage message="No results found. Adjust the search keyword." />
-            )}
+            render={() => <PostsPage message="No results found." />}
           />
           <Route
             exact
             path="/feed"
             render={() => (
               <PostsPage
-                message="No results found. Adjust the search keyword or follow a user."
+                message="No results found. Please follow a user to display posts."
                 filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
+          />
+          <Route
+            exact
+            path="/topics"
+            render={() => <TopicPostsPage message="No results found." />}
           />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
@@ -51,9 +55,18 @@ function App() {
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-          <Route exact path="/topics/create" render={() => <TopicsPostCreateForm />} />
+          <Route
+            exact
+            path="/topics/create"
+            render={() => <TopicsPostCreateForm />}
+          />
           <Route exact path="/topics/:id" render={() => <TopicsPostPage />} />
-          
+          <Route
+            exact
+            path="/topics"
+            render={() => <TopicPostsPage message="No results found." />}
+          />
+
           <Route
             exact
             path="/profiles/:id/edit/username"

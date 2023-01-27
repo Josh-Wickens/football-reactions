@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Card, Media, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -19,6 +19,7 @@ const TopicPost = (props) => {
     like_id,
     question,
     image,
+    topic,
     updated_at,
     setTopicPosts
   } = props;
@@ -88,8 +89,20 @@ const TopicPost = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
+            <Row>
+              <div>
+            <p class="font-weight-bold">TOPIC</p><h5 class="font-weight-bold"><span>{topic}</span></h5>
+            </div>
+            </Row>
+            </div>
+            <div className="d-flex align-items-left">
+            <Row>
+            <div>
+            <span>{updated_at}</span>
+            </div>
+            </Row>
+            </div>
             
-            <span>{updated_at}</span></div>
             <div>
             {is_owner && (
               <MoreDropdown
