@@ -23,7 +23,7 @@ import { BackButton } from "../../hooks/BackButton";
 
 function TopicsPostPage() {
   const { id } = useParams();
-  const [topic, setTopicPost] = useState({ results: [] });
+  const [post, setTopicPost] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
   const [comments, setTopicComments] = useState({ results: [] });
@@ -31,11 +31,11 @@ function TopicsPostPage() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: topic }] = await Promise.all([
+        const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/topics/${id}`),
           axiosReq.get(`/topic_comments/?topic=${id}`),
         ]);
-        setTopicPost({ results: [topic] });
+        setTopicPost({ results: [post] });
         setTopicComments(comments);
         console.log(comments);
       } catch (err) {
@@ -55,13 +55,13 @@ function TopicsPostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
       <PopularProfiles mobile />
 
-        <TopicPost {...topic.results[0]} setTopicPost={setTopicPost} topicsPostPage />
+        <TopicPost {...post.results[0]} setTopicPost={setTopicPost} topicsPostPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}
               profileImage={profile_image}
-              topic={id}
+              post={id}
               setTopicPost={setTopicPost}
               setTopicComments={setTopicComments}
             />

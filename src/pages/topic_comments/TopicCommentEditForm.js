@@ -6,7 +6,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
 function TopicCommentEditForm(props) {
-  const { id, content, setShowEditForm, setComments } = props;
+  const { id, content, setShowEditForm, setTopicComments } = props;
 
   const [formContent, setFormContent] = useState(content);
 
@@ -20,7 +20,7 @@ function TopicCommentEditForm(props) {
       await axiosRes.put(`/topic_comments/${id}/`, {
         content: formContent.trim(),
       });
-      setComments((prevComments) => ({
+      setTopicComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.map((comment) => {
           return comment.id === id

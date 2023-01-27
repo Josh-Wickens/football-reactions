@@ -21,7 +21,7 @@ function TopicCommentCreateForm(props) {
     try {
       const { data } = await axiosRes.post("/topic_comments/", {
         content,
-        topic,
+        post,
       });
       setTopicComments((prevTopicComments) => ({
         ...prevTopicComments,
