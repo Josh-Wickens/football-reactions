@@ -16,6 +16,7 @@ import { Image } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
+import { BackButton } from "../../hooks/BackButton";
 
 function PostCreateForm() {
   useRedirect("loggedOut");
@@ -94,8 +95,10 @@ function PostCreateForm() {
   );
 
   return (
+    
     <Form onSubmit={handleSubmit}>
       <Row>
+      <div><BackButton /></div>
         <Col justify-content-center>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}

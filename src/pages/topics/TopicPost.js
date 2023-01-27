@@ -69,10 +69,10 @@ const TopicPost = (props) => {
       await axiosRes.delete(`/likes-topic/${like_id}/`);
       setTopicPosts((prevTopicPosts) => ({
         ...prevTopicPosts,
-        results: prevTopicPosts.results.map((topic) => {
-          return topic.id === id
-            ? { ...topic, likes_count: topic.likes_count - 1, like_id: null }
-            : topic;
+        results: prevTopicPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
         }),
       }));
     } catch (err) {
