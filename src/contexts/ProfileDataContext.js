@@ -38,6 +38,12 @@ export const ProfileDataProvider = ({ children }) => {
             followHelper(profile, clickedProfile, data.id)
           ),
         },
+        activeProfiles: {
+          ...prevState.activeProfiles,
+          results: prevState.activeProfiles.results.map((profile) =>
+            followHelper(profile, clickedProfile, data.id)
+          ),
+        },
       }));
     } catch (err) {
       console.log(err);
@@ -58,6 +64,13 @@ export const ProfileDataProvider = ({ children }) => {
         popularProfiles: {
           ...prevState.popularProfiles,
           results: prevState.popularProfiles.results.map((profile) =>
+            unfollowHelper(profile, clickedProfile)
+          ),
+        },
+
+        activeProfiles: {
+          ...prevState.activeProfiles,
+          results: prevState.activeProfiles.results.map((profile) =>
             unfollowHelper(profile, clickedProfile)
           ),
         },
