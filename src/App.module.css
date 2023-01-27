@@ -5,7 +5,8 @@
 }
 
 .Main {
-  padding-top: 85px;
+  padding-top: 81px;
+  
 }
 
 .image-upload {
@@ -35,6 +36,7 @@
 .Content {
 
   padding: 10px;
+  
 
 }
 
@@ -43,3 +45,19 @@ figure {
   display: inline-block;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover i {
+  color: #2142b2;
+  transition: color ease-in-out 0.3s;
+}
+
+input[type="file"] {
+  display: none;
+}

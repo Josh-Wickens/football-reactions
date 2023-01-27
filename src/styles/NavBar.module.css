@@ -1,12 +1,12 @@
 .NavBar {
     background-color: #234E70;
     width: 100%;
+    justify-content: center;
 }
 
 .NavLink {
-    vertical-align: middle;
-    height: auto;
-    padding: 5px;
+
+    padding: 10px;
     color: #FBF8BE;
 }
 
@@ -16,7 +16,5 @@
     color: white;
 }
 
-.Nav {
-    vertical-align: middle;
-}
+
 

@@ -33,7 +33,7 @@ function TopicsPostPage() {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/topics/${id}`),
-          axiosReq.get(`/topic_comments/?topic=${id}`),
+          axiosReq.get(`/topic_comments/?post=${id}`),
         ]);
         setTopicPost({ results: [post] });
         setTopicComments(comments);

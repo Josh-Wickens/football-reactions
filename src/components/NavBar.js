@@ -18,7 +18,6 @@ const NavBar = () => {
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async () => {
-    console.log("handle sign out started");
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
@@ -27,7 +26,9 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
+    
+  const loggedInIcons = (
+    <>
     <NavLink
       exact
       className={styles.NavLink}
@@ -37,9 +38,6 @@ const NavBar = () => {
       <i className="fa fa-pencil-square-o"></i>
       Post
     </NavLink>
-  );
-  const loggedInIcons = (
-    <>
     <NavLink
         exact
         className={styles.NavLink}
@@ -64,7 +62,11 @@ const NavBar = () => {
       >
         Search
       </NavLink>
-      <NavLink
+      
+        <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+          Sign Out
+        </NavLink>
+        <NavLink
         exact
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -73,9 +75,6 @@ const NavBar = () => {
         {currentUser?.username}
         <Avatar src={currentUser?.profile_image} height={50} />
       </NavLink>
-        <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-          Sign Out
-        </NavLink>
     </>
   );
   const loggedOutIcons = (
@@ -105,20 +104,21 @@ const NavBar = () => {
       expand="md"
       fixed="top"
     >
-      <Container className="justify-content-between w-100" fluid>
-        <NavLink to="/">
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="50" />
-          </Navbar.Brand>
-        </NavLink>
-        {currentUser && addPostIcon}
+      <Container>
+        
+        
         <Navbar.Toggle
         ref={ref}
           onClick={() => setExpanded(!expanded)}
           aria-controls="basic-navbar-nav"
         />
-        <Navbar.Collapse className="justify-content-between" id="basic-navbar-nav">
+        <Navbar.Collapse>
           <Nav>
+          <NavLink to="/">
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="50" />
+          </Navbar.Brand>
+        </NavLink>
             <NavLink
               exact
               className={styles.NavLink}
