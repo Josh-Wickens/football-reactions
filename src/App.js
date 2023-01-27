@@ -53,6 +53,7 @@ function App() {
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route exact path="/topics/create" render={() => <TopicsPostCreateForm />} />
           <Route exact path="/topics/:id" render={() => <TopicsPostPage />} />
+          
           <Route
             exact
             path="/profiles/:id/edit/username"
