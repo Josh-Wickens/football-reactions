@@ -20,8 +20,7 @@ const TopicPost = (props) => {
     question,
     image,
     updated_at,
-    topic,
-    setTopicPosts,
+    setTopicPosts
   } = props;
 
   const currentUser = useCurrentUser();
@@ -50,7 +49,7 @@ const TopicPost = (props) => {
   };
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.topics("/likes/", { topics: id });
+      const { data } = await axiosRes.post("/likes-topic/", { post: id });
       setTopicPosts((prevTopicPosts) => ({
         ...prevTopicPosts,
         results: prevTopicPosts.results.map((topic) => {
@@ -66,7 +65,7 @@ const TopicPost = (props) => {
 
   const handleUnlike = async () => {
     try {
-      await axiosRes.delete(`/likes/${like_id}/`);
+      await axiosRes.delete(`/likes-topic/${like_id}/`);
       setTopicPosts((prevTopicPosts) => ({
         ...prevTopicPosts,
         results: prevTopicPosts.results.map((topic) => {
