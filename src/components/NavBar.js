@@ -44,6 +44,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/feed"
       >
+        {/* <i class="fa fa-comments"></i> */}
         My Feed
       </NavLink>
       <NavLink
@@ -72,8 +73,8 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        {currentUser?.username}
-        <Avatar src={currentUser?.profile_image} height={50} />
+        
+        <Avatar src={currentUser?.profile_image} text={currentUser?.username} height={45} />
       </NavLink>
     </>
   );
@@ -98,13 +99,14 @@ const NavBar = () => {
     </>
   );
   return (
+    <Container>
     <Navbar
       expanded={expanded}
       className={styles.NavBar}
       expand="md"
       fixed="top"
     >
-      <Container>
+     
         
         
         <Navbar.Toggle
@@ -125,13 +127,16 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
+              {/* <i class="fa fa-home" aria-hidden="true"></i> */}
               Home
+              
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      
     </Navbar>
+    </Container>
   );
 };
 

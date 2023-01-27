@@ -6,10 +6,12 @@
 
 .NavLink {
 
-    padding: 10px;
-    color: #FBF8BE;
-}
 
+    color: #FBF8BE;
+    font-size: 1.6rem;
+    padding: 7px;
+    vertical-align: middle;
+}
 
 
 .Active {
