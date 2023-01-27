@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Form } from "react-bootstrap";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -24,10 +25,12 @@ function TopicPostsPage({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
+  const [query, setQuery] = useState("");
+
   useEffect(() => {
     const fetchTopicPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/topics/?${filter}`);
+        const { data } = await axiosReq.get(`/topics/?${filter}search=${query}`);
         setTopicPosts(data);
         setHasLoaded(true);
       } catch (err) {
@@ -37,16 +40,29 @@ function TopicPostsPage({ message, filter = "" }) {
 
     setHasLoaded(false);
     fetchTopicPosts();
-  }, [filter, pathname]);
+  }, [filter, query, pathname]);
 
 
   return (
     <Row className="h-100">
+
         <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
         <ActiveProfiles />
       </Col>
       <Col className="py-2 p-0 p-lg-2" sm={10} lg={8}>
-        <p>Popular profiles mobile</p>
+      <Form.Group>
+        <Form.Label>Search a Topic</Form.Label>
+        <Form.Control as="select" value={query} onChange={(event) => setQuery(event.target.value)}>
+        <option value="">All</option>
+        <option value="General">General</option>
+       <option value="Players">Players</option>
+       <option value="Teams">Teams</option>
+       <option value="Transfers">Transfers</option>
+       <option value="Fixtures">Fixtures</option>
+       <option value="Results">Results</option>
+       </Form.Control>
+      </Form.Group>
+
         <PopularProfiles mobile/>
         {hasLoaded ? (
           <>

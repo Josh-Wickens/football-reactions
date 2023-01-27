@@ -9,7 +9,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function TopicCommentCreateForm(props) {
-  const { topic, setTopicPost, setTopicComments, profileImage, profile_id } = props;
+  const { post, setTopicPost, setTopicComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import CommentCreateForm from "../comments/CommentCreateForm";
+import TopicCommentCreateForm from "../topic_comments/TopicCommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import appStyles from "../../App.module.css";
@@ -58,7 +58,7 @@ function TopicsPostPage() {
         <TopicPost {...post.results[0]} setTopicPost={setTopicPost} topicsPostPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
-            <CommentCreateForm
+            <TopicCommentCreateForm
               profile_id={currentUser.profile_id}
               profileImage={profile_image}
               post={id}
