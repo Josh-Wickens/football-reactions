@@ -36,10 +36,18 @@
 .Content {
 
   padding: 10px;
-  width: 40%;
+  width: 100%;
   text-align: center;
   
 
+}
+
+.CommentsContainer {
+  width: 100%;
+}
+
+.Container {
+  max-width: '100%';
 }
 
 

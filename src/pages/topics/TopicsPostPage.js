@@ -53,6 +53,7 @@ function TopicsPostPage() {
       <ActiveProfiles />
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <BackButton />
       <PopularProfiles mobile />
 
         <TopicPost {...post.results[0]} setTopicPost={setTopicPost} topicsPostPage />

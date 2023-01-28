@@ -80,9 +80,9 @@ const Comment = (props) => {
 
   return (
     <>
-     <div className={styles.Comments}>
+     
 
-      <Media>
+      <Media className={styles.Comments}>
         <Link to={`/profiles/${profile_id}`}>
           <Avatar src={profile_image} />
         </Link>
@@ -136,7 +136,7 @@ const Comment = (props) => {
           />
         )}
       </Media>
-      </div>
+      
     </>
   );
 };

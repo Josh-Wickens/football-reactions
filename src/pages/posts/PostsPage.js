@@ -50,7 +50,7 @@ function PostsPage({ message, filter = "" }) {
         <div className={styles.Heading}>
         <h2 >Football Reactions</h2>
         <h5>The place to talk <b>Football</b> and <b>React!</b></h5>
-        <div><img className={appStyles.Image} src={Goal} /></div>
+        <div><img className={appStyles.Image} src={Goal} alt="Football Goal" /></div>
         </div>
         <PopularProfiles mobile/>
         <ActiveProfiles mobile/>

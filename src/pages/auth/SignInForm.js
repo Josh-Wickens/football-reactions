@@ -55,7 +55,7 @@ function SignInForm() {
         <div className={styles.Heading}>
         <h2 >Football Reactions</h2>
         <h5>The place to talk <b>Football</b> and <b>React!</b></h5>
-        <div className="w-100"><img className={appStyles.Image} src={Goal} /></div>
+        <div className="w-100"><img className={appStyles.Image} src={Goal} alt="Football Goal" /></div>
         </div>
           <h1 className={styles.Header}>sign in</h1>
           <Form onSubmit={handleSubmit}>
