@@ -6,8 +6,6 @@ import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
-import { BackButton } from "../../hooks/BackButton";
-// import PopularProfiles from "../../profiles/PopularProfiles";
 
 const Post = (props) => {
   const {

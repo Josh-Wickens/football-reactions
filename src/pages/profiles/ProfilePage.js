@@ -23,7 +23,7 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/nothing.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
-import { BackButton } from "../../hooks/BackButton";
+import { BackButton } from "../../components/BackButton";
 import ActiveProfiles from "./ActiveProfiles";
 
 function ProfilePage() {
@@ -108,9 +108,9 @@ function ProfilePage() {
               
               <div className="w-100">
           <hr />
-            <h5>
             
-            <button className={`${styles.OfficialRequest} ${btnStyles.Button} ${btnStyles.Blue}`}><a href="mailto:officialrequest@footballreactions.com?subject='Official Tag Request'&body='Please provide your username and details of your request'">Request Official Status</a></button></h5>
+            
+            <button className={`${btnStyles.Button }`}><a id={styles.Official} href="mailto:officialrequest@footballreactions.com?subject='Official Tag Request'&body='Please provide your username and details of your request'">Request Official Status</a></button>
               </div>
 
               

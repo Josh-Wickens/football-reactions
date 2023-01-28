@@ -11,8 +11,13 @@
   
   .Button:hover {
     opacity: 0.8;
+    background-color: black;
     border-color: transparent;
     cursor: pointer;
+  }
+
+  .Button:hover a{
+    color: white;
   }
   
   .Button:hover:active {
@@ -48,17 +53,13 @@
   
   .Black,
   .BlackOutline:hover {
-    /* background-color: #242a3d;
-    color: white; */
     background-color: #242a3d;
     color: aliceblue;
   }
   
   .Black:hover,
   .BlackOutline {
-    /* background-color: #dadadf;
-    color: #242a3d;
-    border-color: #242a3d; */
+
     background-color: aliceblue;
     color: #242a3d;
   }

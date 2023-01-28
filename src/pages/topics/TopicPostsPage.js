@@ -18,7 +18,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import ActiveProfiles from "../profiles/ActiveProfiles";
 import TopicPost from "./TopicPost";
-import { postTopic } from "../../hooks/PostTopic";
+import { PostTopic } from "../../components/PostTopic";
 
 
 function TopicPostsPage({ message, filter = "" }) {
@@ -52,7 +52,7 @@ function TopicPostsPage({ message, filter = "" }) {
       </Col>
       <Col className="py-2 p-0 p-lg-2" sm={10} lg={6}>
       <Form.Group>
-        <row className="text-center"><div><postTopic /></div></row>
+        <row className="text-center"><div><PostTopic /></div></row>
         <Form.Label>Search a Topic</Form.Label>
         <Form.Control as="select" value={query} onChange={(event) => setQuery(event.target.value)}>
         <option value="">All</option>

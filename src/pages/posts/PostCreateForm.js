@@ -16,7 +16,7 @@ import { Image } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
-import { BackButton } from "../../hooks/BackButton";
+import { BackButton } from "../../components/BackButton";
 
 function PostCreateForm() {
   useRedirect("loggedOut");

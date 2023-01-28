@@ -2,7 +2,7 @@ import React from "react";
 import btnStyles from "../styles/Button.module.css";
 import { Link } from "react-router-dom";
 
-export const postTopic = () => {
+export const PostTopic = () => {
   return (
     <>
       <Link to="/topics/create">

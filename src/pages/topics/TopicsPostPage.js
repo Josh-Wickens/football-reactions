@@ -16,7 +16,7 @@ import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import ActiveProfiles from "../profiles/ActiveProfiles";
-import { BackButton } from "../../hooks/BackButton";
+import { BackButton } from "../../components/BackButton";
 
 
 
