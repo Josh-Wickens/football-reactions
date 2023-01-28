@@ -17,7 +17,6 @@ const ProfileSearch = (props) => {
   
 
   return (
-    
     <Card className={styles.Post}>
       <Card.Body>
         <h5>{fan_or_club}</h5>
@@ -27,7 +26,7 @@ const ProfileSearch = (props) => {
             {owner}
           </Link>
       <Card.Body className="align-items-center justify-content-between">
-        <h4>I support {support}</h4>
+        <p>I support {support}</p>
       </Card.Body>
     </Card>
   );

@@ -6,7 +6,8 @@ import Container from "react-bootstrap/Container";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
-
+import styles from "../../styles/PostsPage.module.css"
+import Goal from "../../assets/goal.png";
 import appStyles from "../../App.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -42,12 +43,17 @@ function PostsPage({ message, filter = "" }) {
 
   return (
     <Row className="h-100">
-        <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
+        <Col lg={3} sm={2} className="d-none d-lg-block p-0 p-lg-2">
         <ActiveProfiles />
       </Col>
-      <Col className="py-2 p-0 p-lg-2" sm={10} lg={8}>
-        <p>Popular profiles mobile</p>
+      <Col className="py-2 p-0 p-lg-2" sm={8} lg={6}>
+        <div className={styles.Heading}>
+        <h2 >Football Reactions</h2>
+        <h5>The place to talk football and <span className="fw-bold">React!</span></h5>
+        <div><img className={appStyles.Image} src={Goal} /></div>
+        </div>
         <PopularProfiles mobile/>
+        <ActiveProfiles mobile/>
         {hasLoaded ? (
           <>
             {posts.results.length ? (
@@ -72,7 +78,7 @@ function PostsPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={3} sm={2} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
       </Col>
     </Row>

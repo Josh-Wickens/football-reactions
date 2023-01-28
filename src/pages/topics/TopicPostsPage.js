@@ -65,7 +65,6 @@ function TopicPostsPage({ message, filter = "" }) {
        </Form.Control>
       </Form.Group>
 
-        <PopularProfiles mobile/>
         {hasLoaded ? (
           <>
             {topics.results.length ? (

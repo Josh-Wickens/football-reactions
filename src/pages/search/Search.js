@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import ProfileSearch from "./ProfileSearch";
 import Asset from "../../components/Asset";
+import styles from "../../styles/PostsPage.module.css";
 
 import appStyles from "../../App.module.css";
 // import styles from "../../styles/PostsPage.module.css";
@@ -52,13 +53,13 @@ function Search({ message, filter = "" }) {
   return (
     <Row className="h-100">
 
-<Col md={2} className="d-none d-lg-block p-0 p-lg-2">
+<Col md={3} className="d-none d-lg-block p-0 p-lg-2">
         <ActiveProfiles />
       </Col> 
       
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
         
-        <i className={`fas fa-search`} />
+        <div className={styles.Heading}><h3>Search for Fans and Clubs!</h3></div>
         <Form onSubmit={(event) => event.preventDefault()}>
           <Form.Control
             value={query}
@@ -107,7 +108,7 @@ function Search({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col md={2} className="d-none d-lg-block p-0 p-lg-2">
+      <Col md={3} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
       </Col> 
     </Row>
