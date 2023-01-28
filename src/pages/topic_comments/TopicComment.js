@@ -105,7 +105,7 @@ const TopicComment = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't agree with your own post!</Tooltip>}
+              overlay={<Tooltip>You can't like your own post!</Tooltip>}
             >
               <i className={`fa fa-check ${styles.CantCheck}`} />
             </OverlayTrigger>

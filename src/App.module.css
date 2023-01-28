@@ -66,7 +66,7 @@ a:hover {
 }
 
 a:hover {
-  color: white;
+ 
   transition: color ease-in-out 0.3s;
 }
 

@@ -6,7 +6,6 @@ import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
-// import PopularProfiles from "../../profiles/PopularProfiles";
 
 const TopicPost = (props) => {
   const {
@@ -69,10 +68,10 @@ const TopicPost = (props) => {
       await axiosRes.delete(`/likes-topic/${like_id}/`);
       setTopicPosts((prevTopicPosts) => ({
         ...prevTopicPosts,
-        results: prevTopicPosts.results.map((post) => {
-          return post.id === id
-            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
-            : post;
+        results: prevTopicPosts.results.map((topic) => {
+          return topic.id === id
+            ? { ...topic, likes_count: topic.likes_count - 1, like_id: null }
+            : topic;
         }),
       }));
     } catch (err) {
@@ -123,7 +122,7 @@ const TopicPost = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't agree with your own post!</Tooltip>}
+              overlay={<Tooltip>You can't like your own post!</Tooltip>}
             >
               <i className={`fa fa-check ${styles.CantCheck}`} />
             </OverlayTrigger>

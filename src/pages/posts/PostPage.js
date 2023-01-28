@@ -45,11 +45,11 @@ function PostPage() {
 
   return (
     <Row className="h-100">
-      <Col sm={2} lg={3} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={3} className="d-none d-lg-block p-0 p-lg-2">
       <BackButton />
       <ActiveProfiles />
       </Col>
-      <Col className="py-2 p-0 p-lg-2" lg={6} sm={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={6} >
       <PopularProfiles mobile />
 
         <Post {...post.results[0]} setPosts={setPost} postPage />
@@ -87,7 +87,7 @@ function PostPage() {
         )}
       </div>
     </Col>
-    <Col lg={2} className="d-none d-lg-block p-0 p-lg-2">
+    <Col lg={3} className="d-none d-lg-block p-0 p-lg-2">
     <PopularProfiles />
     </Col>
   </Row>
