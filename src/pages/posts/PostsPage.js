@@ -49,7 +49,7 @@ function PostsPage({ message, filter = "" }) {
       <Col className="py-2 p-0 p-lg-2" sm={8} lg={6}>
         <div className={styles.Heading}>
         <h2 >Football Reactions</h2>
-        <h5>The place to talk football and <span className="fw-bold">React!</span></h5>
+        <h5>The place to talk <b>Football</b> and <b>React!</b></h5>
         <div><img className={appStyles.Image} src={Goal} /></div>
         </div>
         <PopularProfiles mobile/>

@@ -19,4 +19,12 @@
 }
 
 
+@media screen and (max-width: 825px) {
+    .NavLink {
+        font-size: 1.3rem;
+
+    }
+  }
+
+
 

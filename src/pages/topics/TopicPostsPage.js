@@ -47,10 +47,10 @@ function TopicPostsPage({ message, filter = "" }) {
   return (
     <Row className="h-100">
 
-        <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
+        <Col lg={3} sm={1} className="d-none d-lg-block p-0 p-lg-2">
         <ActiveProfiles />
       </Col>
-      <Col className="py-2 p-0 p-lg-2" sm={10} lg={8}>
+      <Col className="py-2 p-0 p-lg-2" sm={10} lg={6}>
       <Form.Group>
         <row className="text-center"><div><PostTopic /></div></row>
         <Form.Label>Search a Topic</Form.Label>
@@ -89,7 +89,7 @@ function TopicPostsPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col lg={2} sm={1} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={3} sm={1} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
       </Col>
     </Row>

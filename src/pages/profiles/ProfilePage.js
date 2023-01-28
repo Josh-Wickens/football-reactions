@@ -25,6 +25,7 @@ import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/nothing.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 import { BackButton } from "../../hooks/BackButton";
+import ActiveProfiles from "./ActiveProfiles";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -62,7 +63,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-    <BackButton />
+    <BackButton className={styles.Center}/>
     {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
@@ -149,8 +150,10 @@ function ProfilePage() {
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <PopularProfiles mobile />
+      <Col lg={3} className="d-none d-lg-block p-0 p-lg-2">
+        <ActiveProfiles />
+      </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
@@ -162,7 +165,7 @@ function ProfilePage() {
           )}
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={3} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
       </Col>
     </Row>
