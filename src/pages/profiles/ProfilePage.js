@@ -73,7 +73,7 @@ function ProfilePage() {
             src={profile?.image}
           />
         </Col>
-        <Col lg={6}>
+        <Col lg={6} className="mt-2">
           <p>{profile?.fan_or_club}</p>
           <h3 className="m-2">{profile?.owner} <span className={styles.Official}>{profile?.official ? '(Official!)' : ""}</span></h3>
           {profile?.name}

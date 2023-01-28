@@ -30,8 +30,9 @@ const ProfileEditForm = () => {
     bio: "",
     image: "",
     support: "",
+    fan_or_club: "",
   });
-  const { name, bio, image, support } = profileData;
+  const { name, bio, image, support, fan_or_club } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -41,7 +42,7 @@ const ProfileEditForm = () => {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
           const { name, bio, image, support } = data;
-          setProfileData({ name, bio, image, support });
+          setProfileData({ name, bio, image, support, fan_or_club });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -67,6 +68,8 @@ const ProfileEditForm = () => {
     formData.append("name", name);
     formData.append("bio", bio);
     formData.append("support", support);
+    formData.append("fan_or_club", fan_or_club);
+
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -87,7 +90,30 @@ const ProfileEditForm = () => {
 
   const textFields = (
     <>
+
+    
       <Form.Group>
+      <Form.Label>Nickname</Form.Label>
+        <Form.Control
+          as="textarea"
+          value={name}
+          onChange={handleChange}
+          name="name"
+          rows={1}
+        />
+
+<Form.Label>Are you a Fan or a Club?</Form.Label>
+        <Form.Control
+          as="select"
+          value={fan_or_club}
+          onChange={handleChange}
+          name="fan_or_club">
+          <option value="Fan">Fan</option>
+       <option value="Club">Club</option>
+       </Form.Control>
+        
+     
+
         <Form.Label>Bio</Form.Label>
         <Form.Control
           as="textarea"
@@ -106,6 +132,7 @@ const ProfileEditForm = () => {
           rows={1}
         />
       </Form.Group>
+      
 
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
