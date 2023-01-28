@@ -5,6 +5,12 @@
     margin: 4px;
   }
 
+  .Official {
+    font-family: "League Gothic", sans-serif;
+    color: blue;
+    letter-spacing: 1px;
+  }
+
 
   @media screen and (max-width: 991px) {
     .ProfileImage {

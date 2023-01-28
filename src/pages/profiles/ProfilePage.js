@@ -74,8 +74,11 @@ function ProfilePage() {
           />
         </Col>
         <Col lg={6}>
-          <h3 className="m-2">{profile?.owner}</h3>
-          <p>{profile?.support}</p>
+          <p>{profile?.fan_or_club}</p>
+          <h3 className="m-2">{profile?.owner} <span className={styles.Official}>{profile?.official ? '(Official!)' : ""}</span></h3>
+          {profile?.name}
+          
+          
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
@@ -92,11 +95,17 @@ function ProfilePage() {
             
           </Row>
           <Row>
-            <Col lg={6}>
+            <div className="w-100">
           <hr />
-            <h5 className="m-2">
-              Who do you support?</h5>
-            </Col>
+            <h5>
+            {profile?.support} Supporter</h5>
+              </div>
+              <div className="w-100">
+          <hr />
+            <h5>
+            {profile?.bio} Supporter</h5>
+              </div>
+            
 
           </Row>
         </Col>
