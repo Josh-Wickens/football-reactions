@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
 import Post from "./Post";
 import Asset from "../../components/Asset";
 import styles from "../../styles/PostsPage.module.css"
@@ -12,18 +10,18 @@ import appStyles from "../../App.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/nothing.png";
-
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import ActiveProfiles from "../profiles/ActiveProfiles";
 
-
-
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -38,7 +36,7 @@ function PostsPage({ message, filter = "" }) {
 
     setHasLoaded(false);
     fetchPosts();
-  }, [filter, pathname]);
+  }, [filter, pathname, currentUser]);
 
 
   return (
