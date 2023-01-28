@@ -6,7 +6,7 @@ export const BackButton = () => {
     let history = useHistory();
     return (
       <>
-        <button className={`{btnStyles.Button} ${btnStyles.Blue}`} onClick={() => history.goBack()}>
+        <button className={`${btnStyles.Button} ${btnStyles.Blue}`} onClick={() => history.goBack()}>
           <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
         </button>
       </>

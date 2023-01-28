@@ -11,13 +11,13 @@ import Goal from "../../assets/goal.png";
 import appStyles from "../../App.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-
 import NoResults from "../../assets/nothing.png";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import ActiveProfiles from "../profiles/ActiveProfiles";
+
 
 
 function PostsPage({ message, filter = "" }) {
@@ -44,6 +44,7 @@ function PostsPage({ message, filter = "" }) {
   return (
     <Row className="h-100">
         <Col lg={3} sm={2} className="d-none d-lg-block p-0 p-lg-2">
+          
         <ActiveProfiles />
       </Col>
       <Col className="py-2 p-0 p-lg-2" sm={8} lg={6}>

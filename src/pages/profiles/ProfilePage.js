@@ -9,7 +9,6 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
 import PopularProfiles from "./PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
@@ -75,6 +74,7 @@ function ProfilePage() {
         </Col>
         <Col lg={6} className="mt-2">
           <p>{profile?.fan_or_club}</p>
+          
           <h3 className="m-2">{profile?.owner} <span className={styles.Official}>{profile?.official ? '(Official!)' : ""}</span></h3>
           {profile?.name}
           
@@ -105,6 +105,15 @@ function ProfilePage() {
             <h5>
             {profile?.bio} Supporter</h5>
               </div>
+              
+              <div className="w-100">
+          <hr />
+            <h5>
+            
+            <button className={`${styles.OfficialRequest} ${btnStyles.Button} ${btnStyles.Blue}`}><a href="mailto:officialrequest@footballreactions.com?subject='Official Tag Request'&body='Please provide your username and details of your request'">Request Official Status</a></button></h5>
+              </div>
+
+              
             
 
           </Row>
@@ -169,6 +178,7 @@ function ProfilePage() {
               {mainProfile}
               {mainProfilePosts}
             </>
+            
           ) : (
             <Asset spinner />
           )}
