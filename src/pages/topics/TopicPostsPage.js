@@ -50,11 +50,12 @@ function TopicPostsPage({ message, filter = "" }) {
         <Col lg={3} sm={1} className="d-none d-lg-block p-0 p-lg-2">
         <ActiveProfiles />
       </Col>
-      <Col className="py-2 p-0 p-lg-2" sm={10} lg={6}>
+      <Col className="py-2 p-0 p-lg-2"  lg={6}>
       <Form.Group>
         <row className="text-center"><div><PostTopic /></div></row>
-        <Form.Label>Search a Topic</Form.Label>
-        <Form.Control as="select" value={query} onChange={(event) => setQuery(event.target.value)}>
+        <Form.Label className=" w-100 text-center">Search a Topic</Form.Label>
+        <div><i class="fa fa-arrow-down w-100 text-center"></i></div>
+        <Form.Control className="text-center" as="select" value={query} onChange={(event) => setQuery(event.target.value)}>
         <option value="">All</option>
         <option value="General">General</option>
        <option value="Players">Players</option>

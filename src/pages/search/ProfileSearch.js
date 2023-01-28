@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
-import { Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 
