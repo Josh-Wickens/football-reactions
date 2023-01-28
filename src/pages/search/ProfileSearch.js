@@ -11,6 +11,7 @@ const ProfileSearch = (props) => {
     owner,
     image,
     fan_or_club,
+    official,
     support,
   } = props;
 
@@ -26,7 +27,7 @@ const ProfileSearch = (props) => {
             {owner}
           </Link>
       <Card.Body className="align-items-center justify-content-between">
-        <p>I support {support}</p>
+        <p>I support {support}</p><span className={styles.Official}>{official ? 'Official!' : ""}</span>
       </Card.Body>
     </Card>
   );

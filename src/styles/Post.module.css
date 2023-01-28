@@ -38,3 +38,8 @@ i {
     padding: 5px;
 }
 
+.Official {
+  font-family: 'League Gothic';
+  color: blue;
+  font-size: 125%;
+}
