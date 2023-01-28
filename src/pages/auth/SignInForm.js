@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Goal from "../../assets/goal.png"
 
 import { Link, useHistory } from "react-router-dom";
 
@@ -47,8 +48,15 @@ function SignInForm() {
   };
   return (
     <Row className={styles.Row}>
+      
       <Col className="my-auto py-2 p-md-2 ">
+        
         <Container className={`${appStyles.Content} p-4 `}>
+        <div className={styles.Heading}>
+        <h2 >Football Reactions</h2>
+        <h5>The place to talk <b>Football</b> and <b>React!</b></h5>
+        <div className="w-100"><img className={appStyles.Image} src={Goal} /></div>
+        </div>
           <h1 className={styles.Header}>sign in</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
