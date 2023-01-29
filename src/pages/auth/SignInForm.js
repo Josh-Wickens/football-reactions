@@ -55,7 +55,7 @@ function SignInForm() {
         
         <Container className={`${appStyles.Content} p-4 `}>
         <div className={styles.Heading}>
-        <h2 >Football Reactions</h2>
+        <h2 className={appStyles.SiteName}>Football Reactions</h2>
         <h5>The place to talk <b>Football</b> and <b>React!</b></h5>
         <div className="w-100"><img className={appStyles.ImageAuth} src={Goal} alt="Football Goal" /></div>
         </div>
