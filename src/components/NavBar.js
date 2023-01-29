@@ -30,19 +30,18 @@ const NavBar = () => {
     }
   };
 
-    
   const loggedInIcons = (
     <>
-    <NavLink
-      exact
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
-    >
-      <i className="fa fa-pencil-square-o"></i>
-      Post
-    </NavLink>
-    <NavLink
+      <NavLink
+        exact
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/posts/create"
+      >
+        <i className="fa fa-pencil-square-o"></i>
+        Post
+      </NavLink>
+      <NavLink
         exact
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -67,18 +66,21 @@ const NavBar = () => {
       >
         Search
       </NavLink>
-      
-        <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-          Sign Out
-        </NavLink>
-        <NavLink
+
+      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+        Sign Out
+      </NavLink>
+      <NavLink
         exact
         className={styles.NavLink}
         activeClassName={styles.Active}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        
-        <Avatar src={currentUser?.profile_image} text={currentUser?.username} height={45} />
+        <Avatar
+          src={currentUser?.profile_image}
+          text={currentUser?.username}
+          height={45}
+        />
       </NavLink>
     </>
   );
@@ -104,27 +106,24 @@ const NavBar = () => {
   );
   return (
     <Container>
-    <Navbar
-      expanded={expanded}
-      className={styles.NavBar}
-      expand="md"
-      fixed="top"
-    >
-     
-        
-        
+      <Navbar
+        expanded={expanded}
+        className={styles.NavBar}
+        expand="md"
+        fixed="top"
+      >
         <Navbar.Toggle
-        ref={ref}
+          ref={ref}
           onClick={() => setExpanded(!expanded)}
           aria-controls="basic-navbar-nav"
         />
         <Navbar.Collapse>
           <Nav>
-          <NavLink to="/">
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="50" />
-          </Navbar.Brand>
-        </NavLink>
+            <NavLink to="/">
+              <Navbar.Brand>
+                <img src={logo} alt="logo" height="50" />
+              </Navbar.Brand>
+            </NavLink>
             <NavLink
               exact
               className={styles.NavLink}
@@ -133,13 +132,11 @@ const NavBar = () => {
             >
               {/* <i class="fa fa-home" aria-hidden="true"></i> */}
               Home
-              
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
-      
-    </Navbar>
+      </Navbar>
     </Container>
   );
 };

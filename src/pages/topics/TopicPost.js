@@ -35,7 +35,10 @@ const TopicPost = (props) => {
     pathname: '/'}
 
     function SetPage() {
+      /*eslint-disable */
+      // this it to force a rerender on the page.
       const [page, setPage] = useState([]);}
+      /*eslint-enable */
 
   const handleEdit = () => {
     history.push(`/topics/${id}/edit`);

@@ -100,12 +100,12 @@ function ProfilePage() {
             <div className="w-100">
           <hr />
             <h5>
-            {profile?.support} Supporter</h5>
+            {profile?.support}</h5>
               </div>
               <div className="w-100">
           <hr />
             <h5>
-            {profile?.bio} Supporter</h5>
+            {profile?.bio}</h5>
               </div>
               
               <div className="w-100">

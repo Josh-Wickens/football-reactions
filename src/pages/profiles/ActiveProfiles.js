@@ -16,7 +16,7 @@ const ActiveProfiles = ({ mobile }) => {
     >
       {activeProfiles.results.length ? (
         <>
-          <p>Most active profiles.</p>
+          <p><span className={appStyles.PopularAndActive}>Most active profiles</span></p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {activeProfiles.results.slice(0, 4).map((profile) => (

@@ -32,7 +32,7 @@ const ProfileEditForm = () => {
     support: "",
     fan_or_club: "",
   });
-  const { name, bio, image, support, fan_or_club } = profileData;
+  const { name, bio, image, support, fan_or_club = "Fan" } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -53,7 +53,7 @@ const ProfileEditForm = () => {
     };
 
     handleMount();
-  }, [currentUser, history, id]);
+  }, [currentUser, history, id, fan_or_club]);
 
   const handleChange = (event) => {
     setProfileData({

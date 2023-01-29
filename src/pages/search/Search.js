@@ -20,7 +20,6 @@ import ActiveProfiles from "../profiles/ActiveProfiles";
 
 
 function Search({ message, filter = "" }) {
-  //   const [posts, setPosts] = useState({ results: [] });
   const [profile, setProfiles] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();

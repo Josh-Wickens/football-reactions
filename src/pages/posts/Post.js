@@ -32,7 +32,10 @@ const Post = (props) => {
     pathname: '/'}
 
     function SetPage() {
+      // this it to force a rerender on the page.
+      /*eslint-disable */
       const [page, setPage] = useState([]);}
+      /*eslint-enable */
 
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);

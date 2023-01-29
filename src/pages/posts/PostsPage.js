@@ -47,7 +47,7 @@ function PostsPage({ message, filter = "" }) {
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={6}>
         <div className={styles.Heading}>
-        <h2 >Football Reactions</h2>
+        <h2 className={appStyles.SiteName}>Football Reactions</h2>
         <h5>The place to talk <b>Football</b> and <b>React!</b></h5>
         <div><img className={appStyles.Image} src={Goal} alt="Football Goal" /></div>
         </div>

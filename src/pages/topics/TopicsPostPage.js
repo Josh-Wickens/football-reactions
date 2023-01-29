@@ -23,7 +23,7 @@ import { BackButton } from "../../components/BackButton";
 
 function TopicsPostPage() {
   const { id } = useParams();
-  const [post, setTopicPost] = useState({ results: [] });
+  const [post, setTopicPosts] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
   const [comments, setTopicComments] = useState({ results: [] });
@@ -35,7 +35,7 @@ function TopicsPostPage() {
           axiosReq.get(`/topics/${id}`),
           axiosReq.get(`/topic_comments/?post=${id}`),
         ]);
-        setTopicPost({ results: [post] });
+        setTopicPosts({ results: [post] });
         setTopicComments(comments);
         console.log(comments);
       } catch (err) {
@@ -48,22 +48,22 @@ function TopicsPostPage() {
 
   return (
     <Row className="h-100">
-      <Col sm={1} lg={2} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={3} className="d-none d-lg-block p-0 p-lg-2">
       <BackButton />
       <ActiveProfiles />
       </Col>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
       <BackButton />
       <PopularProfiles mobile />
 
-        <TopicPost {...post.results[0]} setTopicPost={setTopicPost} topicsPostPage />
+        <TopicPost {...post.results[0]} setTopicPosts={setTopicPosts} topicsPostPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
             <TopicCommentCreateForm
               profile_id={currentUser.profile_id}
               profileImage={profile_image}
               post={id}
-              setTopicPost={setTopicPost}
+              setTopicPosts={setTopicPosts}
               setTopicComments={setTopicComments}
             />
           ) : comments.results.length ? (
@@ -75,7 +75,7 @@ function TopicsPostPage() {
               <TopicComment
                 key={comment.id}
                 {...comment}
-                setTopicPost={setTopicPost}
+                setTopicPosts={setTopicPosts}
                 setTopicComments={setTopicComments}
               />
             ))}
@@ -91,7 +91,7 @@ function TopicsPostPage() {
         )}
       </Container>
     </Col>
-    <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+    <Col lg={3} className="d-none d-lg-block p-0 p-lg-2">
     <PopularProfiles />
     </Col>
   </Row>

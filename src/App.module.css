@@ -6,7 +6,6 @@
 
 .Main {
   padding-top: 81px;
-  
 }
 
 .image-upload {
@@ -30,16 +29,13 @@
 }
 
 .Card {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 .Content {
-
   padding: 10px;
   width: 100%;
   text-align: center;
-  
-
 }
 
 .CommentsContainer {
@@ -47,10 +43,8 @@
 }
 
 .Container {
-  max-width: '100%';
+  max-width: "100%";
 }
-
-
 
 figure {
   text-align: center;
@@ -66,7 +60,6 @@ a:hover {
 }
 
 a:hover {
- 
   transition: color ease-in-out 0.3s;
 }
 
@@ -74,3 +67,16 @@ input[type="file"] {
   display: none;
 }
 
+.PopularAndActive {
+  font-family: "League Gothic", sans-serif;
+  color: #234E70;
+  letter-spacing: 1px;
+  font-size: 150%;
+}
+
+.SiteName {
+  font-family: "League Gothic", sans-serif;
+  color: #234E70;
+  letter-spacing: 1px;
+  font-size: 250%;
+}
