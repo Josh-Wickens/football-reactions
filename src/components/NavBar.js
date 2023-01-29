@@ -105,13 +105,18 @@ const NavBar = () => {
     </>
   );
   return (
-    <Container>
-      <Navbar
+    <Navbar
         expanded={expanded}
         className={styles.NavBar}
         expand="md"
         fixed="top"
       >
+    <Container>
+    <NavLink to="/">
+              <Navbar.Brand>
+                <img src={logo} alt="logo" height="50" />
+              </Navbar.Brand>
+            </NavLink>
         <Navbar.Toggle
           ref={ref}
           onClick={() => setExpanded(!expanded)}
@@ -119,11 +124,7 @@ const NavBar = () => {
         />
         <Navbar.Collapse>
           <Nav>
-            <NavLink to="/">
-              <Navbar.Brand>
-                <img src={logo} alt="logo" height="50" />
-              </Navbar.Brand>
-            </NavLink>
+            
             <NavLink
               exact
               className={styles.NavLink}
@@ -136,8 +137,9 @@ const NavBar = () => {
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+      
     </Container>
+    </Navbar>
   );
 };
 

@@ -17,6 +17,7 @@ Football Reactions is the perfect place for football fans to come together on on
 
 1. [UX](#UX)
 2. [Design](#design)
+3. [Features](#features)
 
 
 ___
@@ -146,9 +147,37 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 
 ## Topics Page
 
-- This contains posts which are seperate to the standard posts. These posts are categorised into specific topics. The user can decide which topics to see by using the filter bar at the top. This allows the user to decide on the content they wish to see or post about. All posts on the topics page are labelled by the topic which the post is about, so that the user knows what they are talking about.
+- This contains posts which are seperate to the standard posts. These posts are categorised into specific topics. The user can decide which topics to see by using the filter bar at the top. This allows the user to decide on the content they wish to see or post about. All posts on the topics page are labelled by the topic which the post is about, so that the user knows what they are talking about. 
+- The page also contains a button for users to create a topic post so that they can create a post regarding a topic they want to ask or discuss about. 
 
 ![Topics Page](/src/assets/topics.png)
+
+## Topics Post (Create a topics post)
+
+- Image upload so that users can add an image to their post so that the post is more appealing to passing users. It also sets an instant idea as to what the post is about (example being a club logo so that users know the post is regarding a certain club.)
+- A dropdown menu for users to pick a topic. This helps the user figure out what their topic is regarding so that topics are limited to certain topics to prevent topics being hard to find or to pick.
+- A text input so that users can type out the post or question they wish to write.
+
+![Create Topics Post ](/src/assets/topics-post.png)
+![Topics Post Dropdown](/src/assets/topic-dropdown.png)
+
+## Search Page
+
+- A search bar lets the user search for other users. The results display the name of the profile, their avatar, if they are a club or a fan and who they support. This lets the user figure out information regarding the user without having to go into their profile to find out more. 
+- The search bar filters out everything but profiles so that the user can find only user profiles.
+
+![Search Page](/src/assets/search.png)
+
+## Profile Page
+
+- Contains details regarding the profile. It contains details such as how many posts the user has made so that other users can see how active they are. How many followers they have so that users can see how popular the profile is. 
+- Contains all their posts (not including post to topics as these could be seen out of context with other posts at the time which could confuse other users).
+- A request offical status button so that users can request the official tag which will show on their profile so that other users know that the profile is the official profile of a club or player. This feature opens an email with information as to what to write in the email aswell as a prepopulated email address to the website and the subject. This makes the request more user friendly by guiding the user with required information or details.
+
+![Profile Page](/src/assets/profile.png)
+
+
+
 
 
 
