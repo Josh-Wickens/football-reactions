@@ -37,9 +37,9 @@ function TopicsPostPage() {
         ]);
         setTopicPosts({ results: [post] });
         setTopicComments(comments);
-        console.log(comments);
+
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

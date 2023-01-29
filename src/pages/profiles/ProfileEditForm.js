@@ -44,7 +44,7 @@ const ProfileEditForm = () => {
           const { name, bio, image, support } = data;
           setProfileData({ name, bio, image, support, fan_or_club });
         } catch (err) {
-          console.log(err);
+          // console.log(err);
           history.push("/");
         }
       } else {
@@ -83,7 +83,7 @@ const ProfileEditForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

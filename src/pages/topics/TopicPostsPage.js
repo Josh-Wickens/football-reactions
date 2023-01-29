@@ -35,7 +35,7 @@ function TopicPostsPage({ message, filter = "" }) {
         setTopicPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

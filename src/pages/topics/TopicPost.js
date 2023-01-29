@@ -52,7 +52,7 @@ const TopicPost = (props) => {
       SetPage();
 
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
   const handleLike = async () => {
@@ -67,7 +67,7 @@ const TopicPost = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -83,7 +83,7 @@ const TopicPost = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

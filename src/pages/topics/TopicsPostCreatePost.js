@@ -62,7 +62,7 @@ function TopicsPostCreateForm() {
       const { data } = await axiosReq.post("/topics/", formData);
       history.push(`/topics/${data.id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

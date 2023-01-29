@@ -49,7 +49,7 @@ const Post = (props) => {
       SetPage();
 
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
   const handleLike = async () => {
@@ -64,7 +64,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -80,7 +80,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
