@@ -42,10 +42,6 @@
   width: 100%;
 }
 
-.Container {
-  max-width: "100%";
-}
-
 figure {
   text-align: center;
   display: inline-block;
@@ -69,14 +65,14 @@ input[type="file"] {
 
 .PopularAndActive {
   font-family: "League Gothic", sans-serif;
-  color: #234E70;
+  color: #234e70;
   letter-spacing: 1px;
   font-size: 150%;
 }
 
 .SiteName {
   font-family: "League Gothic", sans-serif;
-  color: #234E70;
+  color: #234e70;
   letter-spacing: 1px;
   font-size: 250%;
 }
