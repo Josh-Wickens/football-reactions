@@ -80,3 +80,9 @@ input[type="file"] {
   letter-spacing: 1px;
   font-size: 250%;
 }
+
+.ImageAuth {
+  max-height: 30vh;
+  max-width: 100%;
+  object-fit: contain;
+}

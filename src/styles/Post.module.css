@@ -1,46 +1,44 @@
 .Post {
-    background-color: #fff;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    text-align: center;
-    color: #234E70;
-  }
+  background-color: #fff;
+  border: 1px solid #dadadf;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #234e70;
+}
 
 .PostBar {
-    text-align: right;
+  text-align: right;
 }
 
 i {
-    font-size: 150%;
+  font-size: 150%;
 }
 
 .ticked {
-    font-size: 300%;
-    color: green;
+  font-size: 300%;
+  color: green;
 }
 .CantCheck:hover {
-    color: red;
-
+  color: red;
 }
 
 .tick {
-    color: black;
-  }
-  
-  .tick:hover {
-    color: greenyellow;
-    font-size: 250%;
-  }
+  color: black;
+}
+
+.tick:hover {
+  color: greenyellow;
+  font-size: 250%;
+}
 
 .Count {
-    font-size: 125%;
-    padding: 5px;
+  font-size: 125%;
+  padding: 5px;
 }
 
 .Official {
-  font-family: 'League Gothic';
+  font-family: "League Gothic";
   color: blue;
   font-size: 125%;
 }
-

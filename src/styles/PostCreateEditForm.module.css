@@ -1,18 +1,16 @@
-
 .Container {
-    min-height: 343px;
-  }
+  min-height: 343px;
+}
 
 .upload-image {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .form-file {
-    text-align-last: center;
+  text-align-last: center;
 }
-.ImageCont img{
-    max-width: 200px;
-    max-height: 200px;
+.ImageCont img {
+  max-width: 200px;
+  max-height: 200px;
 }

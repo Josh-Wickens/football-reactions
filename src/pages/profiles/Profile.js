@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
@@ -25,7 +24,7 @@ const Profile = (props) => {
           <Avatar src={image} height={imageSize} />
         </Link>
       </div>
-      <div className={`mx-2 ${styles.WordBreak}`}>
+      <div className="mx-2">
         <strong>{owner}</strong>
       </div>
       <div className={`text-right ${!mobile && "ml-auto"}`}>

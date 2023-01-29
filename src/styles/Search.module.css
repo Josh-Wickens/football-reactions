@@ -1,37 +1,36 @@
 .SearchBar input {
-    border-radius: 20px;
-    color: #242a3d;
-    padding-left: 40px;
-    margin-bottom: 16px;
-  }
-  
-  .SearchIcon {
-    position: absolute;
-    font-size: 1.2rem;
-    padding: 9px;
-    padding-left: 15px;
-  }
-  
-  .SearchIcon:hover {
-    cursor: default;
-    color: #cfced3;
-  }
+  border-radius: 20px;
+  color: #242a3d;
+  padding-left: 40px;
+  margin-bottom: 16px;
+}
 
-.Container, img {
-    max-width: 100px;
-    max-height: 100px;
+.SearchIcon {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 9px;
+  padding-left: 15px;
+}
+
+.SearchIcon:hover {
+  cursor: default;
+  color: #cfced3;
+}
+
+.Container,
+img {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .Card {
-  color: #FBF8BE;
+  color: #fbf8be;
 }
 
 .Heading {
   text-align: center;
 }
 
-
 a {
   color: black;
 }
-
