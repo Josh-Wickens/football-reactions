@@ -11,8 +11,28 @@ ___
 
 Football Reactions is the perfect place for football fans to come together on one platform and speak just about football. Football reaction gives users the chance to state if they are a fan or if they are a club. They can make posts or join in conversations regarding certain topics and communicate together and share opinions. This repository is the frontend of Football Reactions using React Framework.
 
-1. [Testing](#Testing)
-2. [Bugs](#Bugs)
-3. [Technology and Languages](#technology-and-languages)
-4. [Set up project](#set-up-project)
-5. [Deployment](#deployment)
+![Responsive image](/src/assets/responsive.png)
+
+1. [UX](#UX)
+
+
+
+# UX
+## Purpose
+
+- The purpose of this site is to create a social platform for lovers of football to communicate about football and just football. Many people on social media platforms have to search for or go to certain groups to discuss their favourite football topice, whereas Football Reactions contain that, and just that. So more search and filtering to find football talk, just sign in and find all the football topics you want.
+
+## Site Goal
+
+- The site goal is to provide a platform which users can talk about football and find specific topics they would like to talk about. Users will be given the platform to voice their football opinions. It provides a safe space for football lovers to post and not annoy other users about always posting about football as the purpose and goal of this site is to provide a platform which everyone wants to hear your footballing opinions and thoughts.
+
+- ### User Stories
+- I have put user stories as issues as part of agile development you can find the link [here](https://github.com/Mrst12/pp5-frontend-react-appy-families/issues)
+
+- I have also linked my user stories to a kanban board to make them easier to work on you can find the link [here](https://github.com/users/Josh-Wickens/projects/4)
+
+- I also used a website called Asana to do my User Stories as I found the platform easier to work with and helps provides a schedule as it lets you provide due dates to keep you on schedule.
+
+
+
+
