@@ -99,8 +99,8 @@ function ProfilePage() {
           <Row>
             <div className="w-100">
           <hr />
-            <h5>
-            {profile?.support}</h5>
+            <h4>
+            {profile?.support} Supporter</h4>
               </div>
               <div className="w-100">
           <hr />

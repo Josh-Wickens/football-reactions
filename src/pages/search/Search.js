@@ -86,7 +86,7 @@ function Search({ message, filter = "" }) {
               />
             ) : (
               <Container className={appStyles.Content}>
-                <Asset src={NoResults} message={message} />
+                <Asset message="No Profiles Found. Please amend your search." />
               </Container>
             )}
 

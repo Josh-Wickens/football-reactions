@@ -64,11 +64,13 @@ The target audience for Football Reactions are:
 
 ## User Stories
 ___
-- I have put user stories as issues as part of agile development you can find the link [here](https://github.com/Mrst12/pp5-frontend-react-appy-families/issues)
-
-- I have also linked my user stories to a kanban board to make them easier to work on you can find the link [here](https://github.com/users/Josh-Wickens/projects/4)
+- Here is a link to my user stories project on GitHub [Link](https://github.com/users/Josh-Wickens/projects/4)
 
 - I also used a website called Asana to do my User Stories as I found the platform easier to work with and helps provides a schedule as it lets you provide due dates to keep you on schedule.
+
+![Asana Start of Project](/src/assets/asana-start.png)
+![mock diagram and ideas 1](/src/assets/asana-middle.png)
+![mock diagram and ideas 1](/src/assets/asana-end.png)
 ___
 # Design
 
@@ -185,6 +187,12 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 - The buttons were stylised with css to make them more user friendly, such as changing colour when highlighted.
 - There is a request official status button which is a different colour to the rest of the buttons. I have given it a grey background to show that this is a more serious button. The button opens up an email for the user with prepopulated details to make it easier to write the email.
 - The follow button changes text and colour when it has been clicked. This is more user friendly because it will indicate if the user is following the user or not.
+
+## Other features
+
+- An error message will display to users when they try to like their own comments or posts. This will be shown by a red overlaytrigger when hovered over to let them know why.
+- A error message will display to non authenticated users when they try to like a post or comment. This will be shown by a red overlaytrigger when hovered over to let them know why.
+
 
 ## Edit and Delete
 
@@ -347,7 +355,125 @@ ___
 
 - The search page displays a search bar at the top and when the user keys letters into the bar, it will search profiles with the corresponding letters.
 - The search bar only return profiles.
+- If no profiles are found then a Not found image will be shown and a message asking user to amend search. 
 
+![Search displaying nothing](/src/assets/nothing-search.png)
+
+
+
+## Back Button
+
+- The back button component is working and sends the user to the previous page they were on.
+
+## Profile Page
+
+- Back button works on Profile Page.
+- The amount of posts and followers/followed increases when posts have been made or followers have been made.
+- Button to request official status tag works and opens an email externally. Email address, subject and email body is prepopulated.
+- Posts made by the user display under the profile details.
+
+## CRUD
+
+### Posts
+
+- only authenticated users can create posts. 
+- a user can only edit their own posts and not any posts made by other users.
+- a user can only delete their own posts and not any posts made by other users.
+- a non authenticated user can read other users posts but can't edit or delete them.
+- Blank posts can't be created.
+- Posts without images can't be created.
+
+### Comments
+
+- only authenticated users can create comments. 
+- a user can only edit their own comment and not any comments made by other users.
+- a user can only delete their own comments and not any comments made by other users.
+- a non authenticated user can read other users comments but can't edit or delete them.
+- Blank comments can't be created.
+
+### Topic Posts
+
+- only authenticated users can create topic posts. 
+- a user can only edit their own topic posts and not any topic posts made by other users.
+- a user can only delete their own topic posts and not any topic posts made by other users.
+- a non authenticated user can read other users topic posts but can't edit or delete them.
+- Blank topic posts can't be created.
+- Posts without images can't be created.
+
+### Topic Posts Comments
+
+- only authenticated users can create comments. 
+- a user can only edit their own comment and not any comments made by other users.
+- a user can only delete their own comments and not any comments made by other users.
+- a non authenticated user can read other users comments but can't edit or delete them.
+- Blank comments can't be created.
+
+### Likes
+
+- Only authenticated users can like posts, topic posts, comments, topic comments.
+- Only authenticated users remove their like on a post, topic posts, comments, topic comments.
+- This can all be done via the posts page or the post page.
+
+### Profile
+
+- Only authenticated users can create a profile.
+- Only authenticated users can edit their profile. 
+- Authenticated users can edit - name, fan or club, bio, profile image and who do you support.
+- Only an authenticated user can edit their username or password.
+
+## Validation
+
+All CSS was put thought the jigsaw. No errors.
+ESLint was installed. No errors.
+Lighthouse validation passed.
+
+![css Validation](/src/assets/css-validation.png)
+![Lighthouse Validation](/src/assets/lighthouse.png)
+
+# Deployment
+
+## Project Setup
+
+1. Create a new repository in Github and use the 'gitpod' button at the top to create workspace
+
+2. Create the React app by running the terminal command:
+```
+npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm
+```
+Enter y to confirm installing the create-react-app package
+
+3. Enter npm start in the terminal to test if the app is working.
+
+4. The browser should be showing you the React logo.
+
+5. Go to heroku and create a new app with a name and nearby location for the frontend.
+
+6. In the deploy tab got to deployment method and select Github.
+
+7. Search for the github repository you want to connect to.
+
+8. Select manual deploy.
+
+9. Select the open App button to make sure it has deployed successfully.
+
+## Final Deployment
+
+1. Push all your code to github with git add, git commit -m "your commit", git push.
+
+2. On heroku for your front end project select manual deploy in the deploy tab.
+
+3. Click open app and make sure app is working.
+
+# Credits
+
+- I used Code Institute Moments Project as a guide to my code. I adapted my own code from the tutorial as my confidence, knowledge and practice grew.
+
+- Images were from pngaaa - [Link](https://www.pngaaa.com/)
+
+___
+# Aknowledgements
+
+- 
 
 
 
