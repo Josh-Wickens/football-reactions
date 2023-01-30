@@ -9,7 +9,7 @@ ___
 - API Frontend [repository](https://github.com/Josh-Wickens/football-reactions)
 - [User Story board](https://github.com/users/Josh-Wickens/projects/4)
 
-Football Reactions is the perfect place for football fans to come together on one platform and speak just about football. Football reaction gives users the chance to state if they are a fan or if they are a club. They can make posts or join in conversations regarding certain topics and communicate together and share opinions. This repository is the frontend of Football Reactions using React Framework.
+Football Reactions is the perfect place for football fans to come together on one platform and speak exclusively about football. Users can state whether they are a fan or a club, and then create posts or join in conversations regarding certain football topics. They can also communicate together and share their opinions through the like and comment functionality. This repository is the frontend of Football Reactions.
 
 ![Responsive image](/src/assets/responsive.png)
 
@@ -18,30 +18,33 @@ Football Reactions is the perfect place for football fans to come together on on
 1. [UX](#UX)
 2. [Design](#design)
 3. [Features](#features)
-
-
+4. [Technologies Used](#technologies-used)
+5. [Bugs and Fixes](#bugs-and-fixes)
+6. [Testing](#Testing)
+7. [Deployment](#deployment)
+8. [Credits and Acknowledgements](#credits)
 ___
 # UX
 
 ## Purpose
 ___
 
-- The purpose of this site is to create a social platform for lovers of football to communicate about football and just football. Many people on social media platforms have to search for or go to certain groups to discuss their favourite football topice, whereas Football Reactions contain that, and just that. So more search and filtering to find football talk, just sign in and find all the football topics you want.
+- The purpose of this site is to create a social platform for football fans to communicate exclusively about football and its surrounding topics. Usually, on social media platforms, users are required to search for certain groups to discuss their favourite football topics, whereas Football Reactions is a site that users can visit to solely discuss this. They no longer need to search and filter for their football conversations, they can just sign in and interact immediately.
 
 ## Site Goals
 ___
 
-- The site goal is to provide a platform which users can talk about football and find specific topics they would like to talk about. Users will be given the platform to voice their football opinions. It provides a safe space for football lovers to post and not annoy other users about always posting about football as the purpose and goal of this site is to provide a platform which everyone wants to hear your footballing opinions and thoughts.
+- The site goal is to create a space where football fans can visit and have in-depth discussions surrounding their favourite football topics. They have the option to post themselves, as well as interact with posts from other users. It's a platform to exclusively discuss football whilst avoiding other topics altogether.
 
 ## Current User Goals
 ___
 
-- Current users are able to post their thoughts on the site for all users to see, so that other current users can comment back and discuss their thoughts or questions. They can also set a profile to describe the fan or club that they are so that users can decipher who everyone is and their football interests.
+- Current users are able to post their thoughts on the site for all users to see, so that other current users can comment back and discuss their thoughts or questions. They can also set a profile to describe the fan or club that they are so that users can decipher who everyone is and their football interests. Current users are able to what is currently trending in the football world by having access to everyones posts on the homepage.
 
 ## New User Goals
 ___
 
-- New users goals are to encourage users to sign up and feel like they are in a safe space to talk anything football as that is what everyone is doing on the site. 
+- New users goals are to encourage users to sign up and feel like they are in a safe space to talk anything football as that is the sole purpose of the site. 
 
 ## Future Goals
 ___
@@ -66,7 +69,7 @@ The target audience for Football Reactions are:
 ___
 - Here is a link to my user stories project on GitHub [Link](https://github.com/users/Josh-Wickens/projects/4)
 
-- I also used a website called Asana to do my User Stories as I found the platform easier to work with and helps provides a schedule as it lets you provide due dates to keep you on schedule.
+- I also used a website called Asana to do my User Stories. I found the platform easier to work with and to stay on track, as it provides a schedule with due dates.
 
 ![Asana Start of Project](/src/assets/asana-start.png)
 ![mock diagram and ideas 1](/src/assets/asana-middle.png)
@@ -99,7 +102,7 @@ ___
 
 As I am not very artisic, I went online to find colour schemes and fonts which pair up well together.
 
-- I have used a darker colour scheme before in one of my projects and the feedback given was that a lighter and friendlier colour scheme would have made the website more appealing. So afer searching online I came across a colour scheme (which I went through a focus group with friends) which provided a friendly pairing. Although football wasn't on one of the suggested reasons on the website, it was the most popular with my focus group. I went with 2 majority colours as football kits are generaly made up of 2 colours. So to fit in with the football theme I choose the two. 
+- I have used a darker colour scheme before in one of my projects and the feedback given was that a lighter and friendlier colour scheme would have made the website more appealing. So afer searching online I came across a colour scheme (which I went through a focus group with friends) which provided a friendly pairing. Although football wasn't on one of the suggested reasons on the website, it was the most popular with my focus group. I went with 2 majority colours as football kits are generally made up of 2 colours. So to align with the football theme, I choose the two. 
 
 - Link to where I found my chosen colours - Royal Blue #234E70, Pale Yellow #FBF8BE [link](https://webflow.com/blog/best-color-combinations?utm_source=google&utm_medium=search&utm_campaign=Google-Search-Dynamic-Search-Ads-Core-BBSS&utm_term=aud-936979376121:dsa-1636392160939___585305490212___ss_paid-bb&gclid=Cj0KCQiA_bieBhDSARIsADU4zLd8UiEJGoywkUJzpuVrWoxYV5WxU8xRJd9mcOKWncj35uAywy7iCVcaAq7mEALw_wcB)
 
@@ -115,7 +118,7 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 
 ## Navigation
 
-- A navigation bar is displaye at the top of every page to give users an easy way of navigating the website. 
+- A navigation bar is displayed at the top of every page to give users an easy way of navigating the website. 
 - On smaller screens this is changed to a burger for easier access to links to pages rather than reduce the size of the text. The current active page will be indicated by the white font so that users know where in the website they currently are. 
 - The nav bar links change depending on whether the user is logged in or not. If the user is logged in, then they have access to all of the pages of the website. If the user is not logged in, then they only have access to the home, login, or signup pages on the navbar (although they will still have access to pages such as profiles, posts etc. So that if another user wants to share a link to their profile or a specific post on another website then they have the option to share it and others are still able to see the content of that page).
 
@@ -132,8 +135,8 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 ## Home Page
 
 - The home page features the most followed profiles so that a user can see who other people are following and access profiles which are populer with others.
-- Most active profiles so that users can see who the most active profiles are so that they can follow them to have content in their feed which is more regular than other profiles.
-- Contains general posts from everybody so that they can see what everyone is posting.
+- Most active profiles is a feature to allow other users to see which the most active profiles are, so that they can follow them to have content in their feed which is more regular than other profiles.
+- Contains general posts from everybody. For new users this will provide an insight as to what other users regularly post about (this helps with the new user goal), and for current users they can see what is currently trending (current user goal).
 
 ![Home Page](/src/assets/homepage.png)
 
@@ -150,7 +153,7 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 ## Topics Page
 
 - This contains posts which are seperate to the standard posts. These posts are categorised into specific topics. The user can decide which topics to see by using the filter bar at the top. This allows the user to decide on the content they wish to see or post about. All posts on the topics page are labelled by the topic which the post is about, so that the user knows what they are talking about. 
-- The page also contains a button for users to create a topic post so that they can create a post regarding a topic they want to ask or discuss about. 
+- The page also contains a button for users to create a topic post, so that they can choose which topic specifically they want to discuss. 
 
 ![Topics Page](/src/assets/topics.png)
 
@@ -174,7 +177,7 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 
 - Contains details regarding the profile. It contains details such as how many posts the user has made so that other users can see how active they are. How many followers they have so that users can see how popular the profile is. 
 - Contains all their posts (not including post to topics as these could be seen out of context with other posts at the time which could confuse other users).
-- A request offical status button so that users can request the official tag which will show on their profile so that other users know that the profile is the official profile of a club or player. This feature opens an email with information as to what to write in the email aswell as a prepopulated email address to the website and the subject. This makes the request more user friendly by guiding the user with required information or details.
+- A request offical status button, so that users can request the official tag which will show on their profile so that other users know that the profile is the official profile of a club or player. This feature opens an email with information as to what to write in the email aswell as a prepopulated email address to the website and the subject. This makes the request more user friendly by guiding the user with required information or details.
 
 ![Profile Page](/src/assets/profile.png)
 
@@ -185,13 +188,14 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 ## Buttons
 
 - The buttons were stylised with css to make them more user friendly, such as changing colour when highlighted.
-- There is a request official status button which is a different colour to the rest of the buttons. I have given it a grey background to show that this is a more serious button. The button opens up an email for the user with prepopulated details to make it easier to write the email.
+- There is a request official status button which is a different colour to the rest of the buttons. I have given it a grey background to demonstrate to users that this contains unique functionality. The button opens up an email for the user with prepopulated details to make it easier to write the email.
 - The follow button changes text and colour when it has been clicked. This is more user friendly because it will indicate if the user is following the user or not.
 
 ## Other features
 
 - An error message will display to users when they try to like their own comments or posts. This will be shown by a red overlaytrigger when hovered over to let them know why.
 - A error message will display to non authenticated users when they try to like a post or comment. This will be shown by a red overlaytrigger when hovered over to let them know why.
+- The official request tag request can be accepted by the admin and changed on the backend site so that the User then carries the officail tag when a user searches for them or opens their profile page.
 
 
 ## Edit and Delete
@@ -205,14 +209,14 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 ___
 
 - A wider range of topics based on popular subjects users are discussing or bringing up.
-- An area for "clubs only" discuss things with other clubs and vice versa with fans.
+- An area for "clubs only" to discuss things with other clubs and vice versa with fans.
 - Direct messages between users.
-- The ability to bookmark posts so the user can easily access a post they wished to continue commenting about.
-- The ability to post videos and giffs.
+- The ability to bookmark posts so the user can easily access a post they wish to continue commenting about.
+- The ability to post videos and gifs.
 
 ## Components
 
-- Components were setup throughout the project and was reused throughout.
+- Components were set up throughout the project and was reused throughout.
 1. MoreDropdown.js
     - A dropdown menu to allow users to edit and delete their own content.
 2. AxiosDefault.js
@@ -222,7 +226,7 @@ ___
 4. Avatar.js
     - Used for the users avatar throughout the site.
 5. CurrentUserContext.js
-    - Confirm users logged-in status to determine what functionality is available to that user.
+    - Confirm users authenticated status to determine what functionality is available to that user.
 6. ProfileDataContext.js
     - Used for following and unfollowing users.
 7. useRedirect.js
@@ -234,7 +238,7 @@ ___
 10. NavBar.js
     - A navbar for the website which allows the user to easily navigate throughout the website.
 11. PostTopic.js
-    - Creates a button which allows the user to click to access the create a topic post. This is used on the create topic page. If more versions of the topic page is made, then this button can be used multiple times.
+    - Creates a button which allows the user to click to create a topic post. This is used on the create topic page. If more versions of the topic page is made, then this button can be used multiple times.
 12. BackButton.js
     - This provides a button which will take the user to the previous page. This is much more user friendly than using the back button in the browser.
 
@@ -252,7 +256,7 @@ ___
 ___
 
 - Django
-    - Frame works used to build the backend of the project.
+    - Frameworks used to build the backend of the project.
 - ElephantSQL
     - Database used to store data once deployed
 - Justinmind 
@@ -264,9 +268,9 @@ ___
 - Gitpod
     - IDE used to code project
 - Heroku
-    - used to deploy the application
+    - Used to deploy the application
 - Django
-    - used to build the backend database, that serves as an API for the front end part of the  project
+    - Used to build the backend database, that serves as an API for the front end part of the  project
 - ReactJS
     - To build components that collectively form the front end of the application.
 - React-Bootstrap
@@ -274,12 +278,12 @@ ___
 - SQLite
     - Used to run local database test.
 - Google fonts
-    - used for selecting fonts for project.
+    - Used for selecting fonts for project.
 - FontAwesome
     - For the use of icons.
     - Used to store all images
 - Amiresponsive
-    - used for testing responsiveness and providing screenshots in different sizes.
+    - Used for testing responsiveness and providing screenshots in different sizes.
 
 ___
 # Bugs and Fixes
@@ -313,8 +317,8 @@ ___
 
 ## Sign in page
 
-- I have tested the sign in page by keying incorrect login details. This threw an error and prevented the user to log in. 
-- I have tested leaving the login fields on the form blank. This throws an error and instructs the user that fields may no be blank.
+- I have tested the sign in page by keying incorrect login details. This threw an error and prevented the user from logging in. 
+- I have tested leaving the login fields on the form blank. This throws an error and instructs the user that fields must not be left blank.
 - Link to the Sign up page works underneath log in form.
 
 ![Test Login](/src/assets/test-login.png)
@@ -334,11 +338,11 @@ ___
 ## Log in or Out NavBar
 
 - I have tested that the navbar changes links depending on if you are logged in or out. 
-- I have tested all the links in the nav bar when not logged in and they work.
+- I have tested all the links in the nav bar when not logged in and they work as expected.
 
 ## NavBar
 
-- I have tested all the links in the NavBar when you are logged in and they work.
+- I have tested all the links in the NavBar when you are logged in and they work as expected.
 
 ## My Feed Page
 
@@ -368,7 +372,7 @@ ___
 ## Profile Page
 
 - Back button works on Profile Page.
-- The amount of posts and followers/followed increases when posts have been made or followers have been made.
+- The amount of posts and followers/profiles followed increases when posts have been created or when other users have been followed.
 - Button to request official status tag works and opens an email externally. Email address, subject and email body is prepopulated.
 - Posts made by the user display under the profile details.
 
@@ -376,36 +380,36 @@ ___
 
 ### Posts
 
-- only authenticated users can create posts. 
-- a user can only edit their own posts and not any posts made by other users.
-- a user can only delete their own posts and not any posts made by other users.
-- a non authenticated user can read other users posts but can't edit or delete them.
+- Only authenticated users can create posts. 
+- A user can only edit their own posts and not any posts made by other users.
+- A user can only delete their own posts and not any posts made by other users.
+- A non authenticated user can read other users posts but can't edit or delete them.
 - Blank posts can't be created.
 - Posts without images can't be created.
 
 ### Comments
 
-- only authenticated users can create comments. 
-- a user can only edit their own comment and not any comments made by other users.
-- a user can only delete their own comments and not any comments made by other users.
-- a non authenticated user can read other users comments but can't edit or delete them.
+- Only authenticated users can create comments. 
+- A user can only edit their own comment and not any comments made by other users.
+- A user can only delete their own comments and not any comments made by other users.
+- A non authenticated user can read other users comments but can't edit or delete them.
 - Blank comments can't be created.
 
 ### Topic Posts
 
-- only authenticated users can create topic posts. 
-- a user can only edit their own topic posts and not any topic posts made by other users.
-- a user can only delete their own topic posts and not any topic posts made by other users.
-- a non authenticated user can read other users topic posts but can't edit or delete them.
+- Only authenticated users can create topic posts. 
+- A user can only edit their own topic posts and not any topic posts made by other users.
+- A user can only delete their own topic posts and not any topic posts made by other users.
+- A non authenticated user can read other users topic posts but can't edit or delete them.
 - Blank topic posts can't be created.
 - Posts without images can't be created.
 
 ### Topic Posts Comments
 
-- only authenticated users can create comments. 
-- a user can only edit their own comment and not any comments made by other users.
-- a user can only delete their own comments and not any comments made by other users.
-- a non authenticated user can read other users comments but can't edit or delete them.
+- Only authenticated users can create comments. 
+- A user can only edit their own comment and not any comments made by other users.
+- A user can only delete their own comments and not any comments made by other users.
+- A non authenticated user can read other users comments but can't edit or delete them.
 - Blank comments can't be created.
 
 ### Likes
@@ -421,7 +425,7 @@ ___
 - Authenticated users can edit - name, fan or club, bio, profile image and who do you support.
 - Only an authenticated user can edit their username or password.
 
-## Validation
+### Validation
 
 All CSS was put thought the jigsaw. No errors.
 ESLint was installed. No errors.
@@ -429,6 +433,11 @@ Lighthouse validation passed.
 
 ![css Validation](/src/assets/css-validation.png)
 ![Lighthouse Validation](/src/assets/lighthouse.png)
+
+### Responsive Design
+- I have tested my site for mobile use. Using [Am I Responsive](https://ui.dev/amiresponsive), I have successfully managed to be able use all features on the site, and css styling amends to the phone size.
+
+![Responsive image](/src/assets/responsive.png)
 
 # Deployment
 
@@ -471,7 +480,7 @@ Enter y to confirm installing the create-react-app package
 - Images were from pngaaa - [Link](https://www.pngaaa.com/)
 
 ___
-# Aknowledgements
+# Acknowledgements
 
 - I would like to thank Ger at the tutor suppor for all his help throughout all my projects.
 
