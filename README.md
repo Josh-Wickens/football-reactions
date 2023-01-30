@@ -78,7 +78,7 @@ ___
 - Below are a couple of my initial design and thoughts regarding the planning of my project. I did not proceed with all of these ideas or mocks, but helped me with the initial planning and design aspect.
 
 ![mock diagram and ideas 1](/src/assets/planning-1.png)
-![mock diagram and ideas 2](/src/assets/planning-1.png)
+![mock diagram and ideas 2](/src/assets/planning-2.jpg)
 
 ## Wireframes
 ___
@@ -176,6 +176,113 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 
 ![Profile Page](/src/assets/profile.png)
 
+## Not Found Page
+
+- A not found page was created if the user tries to access an incorrect url on the site. The navbar remains in view so that the user can redirect themself to where they would like to go.
+
+## Buttons
+
+- The buttons were stylised with css to make them more user friendly, such as changing colour when highlighted.
+- There is a request official status button which is a different colour to the rest of the buttons. I have given it a grey background to show that this is a more serious button. The button opens up an email for the user with prepopulated details to make it easier to write the email.
+- The follow button changes text and colour when it has been clicked. This is more user friendly because it will indicate if the user is following the user or not.
+
+## Edit and Delete
+
+- The user has been given accessibility to profiles and posts which they can edit or delete. 
+- This is consistently done with 3 dots so that it is consistent across the site. This will make it easier for users to spot when a feature can be edited.
+
+![Edit and Delete dropdown](/src/assets/edit-delete-dropdown.png)
+
+## Future Features
+___
+
+- A wider range of topics based on popular subjects users are discussing or bringing up.
+- An area for "clubs only" discuss things with other clubs and vice versa with fans.
+- Direct messages between users.
+- The ability to bookmark posts so the user can easily access a post they wished to continue commenting about.
+- The ability to post videos and giffs.
+
+## Components
+
+- Components were setup throughout the project and was reused throughout.
+1. MoreDropdown.js
+    - A dropdown menu to allow users to edit and delete their own content.
+2. AxiosDefault.js
+    - Helped with communication with the backend API.
+3. Asset.js
+    - Is used for the loading spinner throughout the site for when the site is waiting for data to be sent from the API.
+4. Avatar.js
+    - Used for the users avatar throughout the site.
+5. CurrentUserContext.js
+    - Confirm users logged-in status to determine what functionality is available to that user.
+6. ProfileDataContext.js
+    - Used for following and unfollowing users.
+7. useRedirect.js
+    - Redirects the user to another page if the user is not authorised to access the page. 
+8. utils.js
+    - This allows Infinite Scroll to be used across the website where needed.
+9. NotFound.js
+    - Used to display content to a user if they have tried to access a non existent url in the website.
+10. NavBar.js
+    - A navbar for the website which allows the user to easily navigate throughout the website.
+11. PostTopic.js
+    - Creates a button which allows the user to click to access the create a topic post. This is used on the create topic page. If more versions of the topic page is made, then this button can be used multiple times.
+12. BackButton.js
+    - This provides a button which will take the user to the previous page. This is much more user friendly than using the back button in the browser.
+
+# Technologies Used
+
+## Main Languages
+___
+
+- HTML5
+- CSS
+- Python
+- Javascript
+
+### Frameworks, libraries, and programmes
+___
+
+- Django
+    - Frame works used to build the backend of the project.
+- ElephantSQL
+    - Database used to store data once deployed
+- Justinmind 
+    - For the wireframes
+- Git
+    - For version control, committing and pushing to Github
+- Github
+    - For storing the repository, files and images pushed from Gitpod
+- Gitpod
+    - IDE used to code project
+- Heroku
+    - used to deploy the application
+- Django
+    - used to build the backend database, that serves as an API for the front end part of the  project
+- ReactJS
+    - To build components that collectively form the front end of the application.
+- React-Bootstrap
+    - The styling side of the front end application used as it was introduced during the walkthrough project.
+- SQLite
+    - Used to run local database test.
+- Google fonts
+    - used for selecting fonts for project.
+- FontAwesome
+    - For the use of icons.
+    - Used to store all images
+- Amiresponsive
+    - used for testing responsiveness and providing screenshots in different sizes.
+
+___
+# Bugs and Fixes
+
+- I had a bug that would not allow the user to logout. It would throw an error in the console stating that the request had failed. I fixed this bug with the help of Oisin in tutor support. We located the return response was missing from my API views. Once the return response was keyed, the user was able to log out. 
+
+![Log out error](/src/assets/sign-out-bug.png)
+![Bug spot](/src/assets/log-out-bug.png)
+![Bug fix](/src/assets/log-out-fix.png)
+
+- I had a bug when the user went into a topic post and when they would click the like button, it would not do anything. I could see that it was registering because the id was setting in the console. When I would click it again it would say possible duplicate. This meant that the page was not rerendering which meant there must be a problem with the set state. I found that setTopicPost was missing an s on the end, so it was not refreshing the component once clicked. 
 
 
 
@@ -185,4 +292,5 @@ Link to where I found my chosen fonts League Gothic & PT Serif [link](https://el
 
 
 
-EDITING AND DELETING!!!XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
