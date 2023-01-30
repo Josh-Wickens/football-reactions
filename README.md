@@ -276,6 +276,9 @@ ___
 ___
 # Bugs and Fixes
 
+
+### Fixed
+
 - I had a bug that would not allow the user to logout. It would throw an error in the console stating that the request had failed. I fixed this bug with the help of Oisin in tutor support. We located the return response was missing from my API views. Once the return response was keyed, the user was able to log out. 
 
 ![Log out error](/src/assets/sign-out-bug.png)
@@ -284,6 +287,66 @@ ___
 
 - I had a bug when the user went into a topic post and when they would click the like button, it would not do anything. I could see that it was registering because the id was setting in the console. When I would click it again it would say possible duplicate. This meant that the page was not rerendering which meant there must be a problem with the set state. I found that setTopicPost was missing an s on the end, so it was not refreshing the component once clicked. 
 
+
+### Not fixed
+- No other known bugs.
+
+___
+# Testing
+
+## URLS
+
+- All urls are working when clicked. 
+- When a url is not identified, the not found page is displayed.
+
+## Images
+
+- All images are working and displaying properly.
+
+## Sign in page
+
+- I have tested the sign in page by keying incorrect login details. This threw an error and prevented the user to log in. 
+- I have tested leaving the login fields on the form blank. This throws an error and instructs the user that fields may no be blank.
+- Link to the Sign up page works underneath log in form.
+
+![Test Login](/src/assets/test-login.png)
+
+## Sign up page
+
+- I have tested the sign up page by leaving the details blank. This prevents login and instructs user to not leave inputs blank.
+- I have tested using non matching passwords. This prevents sign up.
+- The link underneath the sign up form to the sign in page works.
+
+## Home Page
+
+- I have tested that the most active profiles are in order by changing who has the most posts. This amended the order of the profiles.
+- I have tested that the most followed profiles are in order by changing who has the most followers. This amended the order of the profiles.
+- The button for follow changes to unfollow when a user is followed.
+
+## Log in or Out NavBar
+
+- I have tested that the navbar changes links depending on if you are logged in or out. 
+- I have tested all the links in the nav bar when not logged in and they work.
+
+## NavBar
+
+- I have tested all the links in the NavBar when you are logged in and they work.
+
+## My Feed Page
+
+- I have tested my feed page and all posts are displaying properly and only displaying posts by users who are being followed. I have unfollowed all users and this shows no posts.
+
+## Topics Page
+
+- The create a topic post button works and takes you to the topics/create page.
+- The filter bar works and finds topic posts only with the corresponding topic name.
+- The "all" on the topics filter displays all the topic posts.
+- The topic post displays the topic type on the post itself.
+
+## Search Page
+
+- The search page displays a search bar at the top and when the user keys letters into the bar, it will search profiles with the corresponding letters.
+- The search bar only return profiles.
 
 
 
