@@ -473,13 +473,8 @@ Enter y to confirm installing the create-react-app package
 ___
 # Aknowledgements
 
-- 
+- I would like to thank Ger at the tutor suppor for all his help throughout all my projects.
 
+- My mentor for his help on my final project.
 
-
-
-
-
-
-
-
+- Especially to my partner for being so patient with me throughout this entire journey.
